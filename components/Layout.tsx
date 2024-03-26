@@ -23,7 +23,8 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
           <Link className={router?.pathname === '/' ? 'current' : undefined} href="/">Home</Link>
           <Link className={router?.pathname === '/about' ? 'current' : undefined} href="/about">About</Link>
           <Link className={router?.pathname === '/cars' ? 'current' : undefined} href="/cars">cars List</Link>
-          <a target="_blank" href="/api/cars">cars API</a>
+          <Link href="/api/cars">cars API</Link>
+          <Link href="/api/page">pageinfo API</Link>
         </nav>
       </header>
       <div className='layout'>

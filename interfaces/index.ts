@@ -23,3 +23,13 @@ export type Car = {
   makeableId: number
   families: Family[]
 }
+
+export type PageData = {
+  uri: string
+  id: string
+  date: string
+  title: string | null
+  slug: string
+  excerpt: string | null
+  content: string | null
+}

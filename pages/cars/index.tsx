@@ -1,26 +1,21 @@
 import { GetServerSideProps, GetServerSidePropsContext } from 'next'
 
-import { Car } from '../../interfaces'
-import { sampleUserData } from '../../utils/sample-data'
+import { Car, PageData } from '../../interfaces'
 import Layout from '../../components/Layout'
+import { PageTemplate } from '../../components/template'
 
 type Props = {
-  items: Car[]
+  cars: Car[]
+  pageInfo: PageData
 }
 
-const WithServerSideProps = ({ items }: Props) => {
-  console.log(items)
+const WithServerSideProps = ({ cars, pageInfo }: Props) => {
+  console.log({cars, pageInfo})
   
   return (
 
     <Layout title="Users List | Next.js + TypeScript Example">
-      <h1>Cars list</h1>
-      <div className='page-info'>
-        <p>Cars Make list with Families that has at least 1 image in its families with image first family order</p>
-      </div>
-      <div className='car-cards-container'>
-      </div>
-
+      <PageTemplate cars={cars} pageInfo={pageInfo}/>
     </Layout>
   )
 }
@@ -31,8 +26,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx: GetServerSideP
   // Don't forget to include the respective types for any props passed into
   // the component.
 
-  const items: Car[] = sampleUserData
-  return { props: { items } }
+  // Fetch pageInfo and Cars Data via api and pass that to client
+
+  const cars = []
+  const page = {}
+  return { props: { cars, pageInfo: page } }
 }
 
 export default WithServerSideProps
