@@ -14,7 +14,7 @@ yarn run dev
 ```
 
 ## Task
-The task is to fetch cars data and pageData from the local api /api/cars and /api/page respectively and use that data to build an archive cars page.
+The task is to fetch cars data and pageData from the local api (/api/cars and /api/page) respectively and use that data to build an archive cars page.
 
 ## The requirements are:
 * Only display cars by make name that has atleast one family image.
