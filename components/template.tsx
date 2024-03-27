@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import { Car, PageData } from "../interfaces";
 
 export const PageTemplate:FunctionComponent<PageTemplateProp> = ({pageInfo, cars}) => {
-  // get cars and pageInfo from ssr and also refetch from the client side to 
+  // get cars and pageInfo from ssr and also refetch from the client side too as data may change quickly
 
   return (
     <div>
