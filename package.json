@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "next": "latest",
+    "node-html-parser": "^6.1.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
